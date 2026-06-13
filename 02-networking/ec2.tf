@@ -20,7 +20,7 @@ data "aws_ami" "amazon_linux_2" {
 
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.amazon_linux_2.id   # from the data source above
-  instance_type          = "t2.micro"                       # free tier eligible
+  instance_type          = "t3.micro"                       # free tier eligible in ap-south-1
   subnet_id              = aws_subnet.public.id             # place it in the public subnet
   vpc_security_group_ids = [aws_security_group.web_sg.id]  # attach the security group
 
