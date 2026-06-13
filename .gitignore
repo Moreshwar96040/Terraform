@@ -1,0 +1,19 @@
+# Terraform state (sensitive — never commit)
+*.tfstate
+*.tfstate.backup
+
+# Terraform provider binaries and cache
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+!example.tfvars
+
+# IDE files
+.idea/
+*.iml
